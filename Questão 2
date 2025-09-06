@@ -1,0 +1,37 @@
+using System;
+
+public class Pacman {
+
+    public string Habilidade;
+    public string Nick;
+    public string Cor;
+    
+    public void GerarFantasma(){
+        Console.WriteLine($"{Habilidade}, {Nick} e {Cor}");
+    }
+    
+    public void Mover(string Movimento){
+        Console.WriteLine($"{Nick} se moveu para {Movimento}");
+    }
+}
+
+
+public class Program {
+    
+    public static void Main(){
+        
+        Pacman jogo1 = new Pacman();
+        jogo1.Habilidade = "Voar";
+        jogo1.Nick = "jpzierrr";
+        jogo1.Cor = "vermelho";
+        jogo1.GerarFantasma();
+        jogo1.Mover("esquerda");
+        
+        Pacman jogo2 = new Pacman();
+        jogo2.Habilidade = "Correr";
+        jogo2.Nick = "dzzierr";
+        jogo2.Cor = "azul";
+        jogo2.GerarFantasma();
+        jogo2.Mover("direita");
+    }
+}
