@@ -1,0 +1,62 @@
+using System;
+
+public class Pessoa
+{
+    public string Nome;
+    public int Idade;
+    public string Cargo;
+    
+    public void ApresentarCargo()
+    {
+        Console.WriteLine($"Olá, meu nome é {Nome}, e minha idade é {Idade} e o meu cargo é {Cargo}. ");
+    }
+    
+        public void ApresentarSalario()
+    {
+        if (Cargo == "estagiário") {
+            Console.WriteLine($"Seu salário é de: R$100,00");
+            
+        } else if (Cargo == "desenvolvedor") {
+            Console.WriteLine($"Seu salário é de: R$5000,00");
+            
+        }  else if (Cargo == "gerente") {
+            Console.WriteLine($"Seu salário é de: R$10000,00");
+            
+        }
+    }
+}
+
+public class Program
+{
+    public static void Main()
+    {
+
+        Pessoa p1 = new Pessoa();
+        p1.Idade = 20;
+        p1.Nome = "João Pedro";
+        p1.Cargo = "CEO";
+        p1.ApresentarCargo();
+        
+        Pessoa p2 = new Pessoa();
+        p2.Idade = 20;
+        p2.Nome = "Diogo";
+        p2.Cargo = "estagiário";
+        p2.ApresentarCargo();
+        p2.ApresentarSalario();
+        
+        Pessoa p3 = new Pessoa();
+        p3.Idade = 19;
+        p3.Nome = "Rodrigo";
+        p3.Cargo = "desenvolvedor";
+        p3.ApresentarCargo();
+        p3.ApresentarSalario();
+        
+        Pessoa p4 = new Pessoa();
+        p4.Idade = 22;
+        p4.Nome = "Gabriela";
+        p4.Cargo = "gerente";
+        p4.ApresentarCargo();
+        p4.ApresentarSalario();
+    }
+
+}
